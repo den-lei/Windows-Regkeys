@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; These are for inplace Upgrade 
+[HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup]
+"AllowUpgradesWithUnsupportedTPMOrCPU"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\PCHC]
+"UpgradeEligibility"=dword:00000001
+
+; These are for a fresh install - Copy this .reg file to your flash drive. At the Start press Shift + F10 to open the command prompt, then type 'regedit' to launch Registry Editor. Finally, import this file.
+[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
+"BypassTPMCheck"=dword:00000001
+"BypassSecureBootCheck"=dword:00000001
+"BypassRAMCheck"=dword:00000001
+"BypassStorageCheck"=dword:00000001
+"BypassCPUCheck"=dword:00000001
+"BypassDiskCheck"=dword:00000001
+
+; The newish GPO but as a registry key. Currently, Microsoft has not implemented a 'hardware not supported' watermark / notification for users but will be helpful in the future.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"hideUnsupportedHardwareNotifications"=dword:00000001
