@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+;Re-enable the periodic backup feature and keep the last 5
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Manager]
+"EnablePeriodicBackup"=dword:00000001
+"BackupCount"=dword:00000005
