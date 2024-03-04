@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+;"Speed up" the Start menu by disabling animation (setting it to 0ms)
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"MenuShowDelay"="0"
